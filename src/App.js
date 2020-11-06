@@ -4,7 +4,8 @@ import { makeStyles } from '@material-ui/core';
 import Home from './components/pages/Home';
 import Navbar from './components/Navbar';
 import Contact from './components/pages/Contact';
-import Service from './components/pages/Services';
+import Services from './components/pages/Services';
+import About from './components/pages/About';
 
 
 const useStyles = makeStyles({});
@@ -19,8 +20,9 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact from="/" render={props => <Home {...props} />} />
+          <Route exact from="/about" render={props => <About {...props} />} />
           <Route exact path="/contact" render={props => <Contact {...props} />} />
-          <Route exact path="/services" render={props => <Service {...props} />} />
+          <Route exact path="/services" render={props => <Services {...props} />} />
         </Switch>
       </Router>
     </div>

@@ -10,12 +10,14 @@ import Menu from '@material-ui/core/Menu';
 import { withRouter } from 'react-router-dom';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Button from "@material-ui/core/Button";
+import { Grid } from '@material-ui/core';
 
 
 
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
+        overflow: 'hidden'
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -24,6 +26,7 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('xs')]: {
             flexGrow: 1,
         }
+
     },
     headerOptions: {
         display: "flex",
@@ -77,12 +80,14 @@ const Navbar = props => {
     return (
         <div className={classes.root}>
 
-            <AppBar position="static">
+            <AppBar position="static" style={{ backgroundColor: 'white' }}>
                 <Toolbar>
 
-                    <Typography variant="h6" className={classes.title}>
-                        Cameraworx
-                    </Typography>
+
+                    <Grid item className={classes.title}>
+                        <img src="logo1.png" width="85px" height="50px" />
+                    </Grid>
+
 
 
                     {isMobile ? (
@@ -117,6 +122,7 @@ const Navbar = props => {
                         </>) : (
                             <div className={classes.headerOptions}>
                                 <Button onClick={() => handleButtonClick('/')}>Home</Button>
+                                <Button onClick={() => handleButtonClick('/about')}>About Us</Button>
                                 <Button onClick={() => handleButtonClick('/services')}>Services</Button >
                                 <Button onClick={() => handleButtonClick('/contact')}>Contact</Button >
                             </div>

@@ -1,12 +1,15 @@
 import React from 'react';
 import Footer from '../Footer';
+import ServiceItem from '../ServiceItem';
 
 
-export default function Service() {
+function Services() {
     return (
         <div>
-            this is service
+            <ServiceItem />
             <Footer />
         </div>
     )
 }
+
+export default Services;

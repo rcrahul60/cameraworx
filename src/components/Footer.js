@@ -7,12 +7,13 @@ import React from 'react';
 const useStyles = makeStyles(theme => ({
     root: {
         //flexGrow: 1,
-        background: '#242424',
+        background: '#000',
         display: 'flex',
         // minHeight: '100vh',
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        overflow: 'hidden'
     },
 }));
 
@@ -21,12 +22,10 @@ function Footer() {
     const classes = useStyles()
     return (
         <div className={classes.root}>
-            <Grid container spacing={2}>
-                <Grid item md={4} sm={12}>
+            <Grid container spacing={3}>
 
-                </Grid>
-                <Grid item md={12}>
-                    <Typography>Cameraworx pvt ltd</Typography>
+                <Grid item md={12} sm={12}>
+                    <Typography style={{ textAlign: 'center', fontSize: '17px', color: '#fff' }}>Cameraworx Pvt Ltd &copy; 2020 All Right Reserved</Typography>
                 </Grid>
             </Grid>
         </div>

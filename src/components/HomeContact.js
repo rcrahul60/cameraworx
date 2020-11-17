@@ -1,7 +1,7 @@
-import '../../App.css';
+import '../App.css';
 import React from 'react';
-import Footer from '../Footer';
-import ContactForm from '../ContactForm';
+import Footer from './Footer';
+import ContactForm from './ContactForm';
 import { Typography, Grid, Container, List, ListItem, ListItemText } from '@material-ui/core';
 import { makeStyles, createMuiTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
@@ -28,7 +28,7 @@ let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 
 
-function Contact() {
+function HomeContact() {
     const classes = useStyles;
     const [dense, setDense] = React.useState(false);
     return (
@@ -44,12 +44,7 @@ function Contact() {
                     background: '#f2f2f2',
                 }}
             >
-                {/* <Grid container>
-                         <Map google={this.props.google} />
-                    </Grid> */}
-                <Grid style={{ overflow: 'hidden' }}>
-                    <img src="image/contactus.jpg" />
-                </Grid>
+
                 <Grid item md={6} sm={12}>
                     <Grid container justify="center" direction="column" alignItems="center">
                         <Grid item><Typography gutterBottom > Office Address:</Typography></Grid>
@@ -112,4 +107,4 @@ function Contact() {
 //      apiKey: 'AIzaSyAviREIFjl0khoELxrKwp5-FqDNB_fS8nY'
 // })(Contact);
 
-export default Contact;
+export default HomeContact;

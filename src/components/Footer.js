@@ -24,7 +24,7 @@ function Footer() {
         <div className={classes.root}>
             <Grid container spacing={3}>
 
-                <Grid item md={12} sm={12}>
+                <Grid item md={12} sm={12} style={{ padding: '20px' }}>
                     <Typography style={{ textAlign: 'center', fontSize: '17px', color: '#fff' }}>Cameraworx Pvt Ltd &copy; 2020 All Right Reserved</Typography>
                 </Grid>
             </Grid>

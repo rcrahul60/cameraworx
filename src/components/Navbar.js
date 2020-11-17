@@ -85,7 +85,7 @@ const Navbar = props => {
 
 
                     <Grid item className={classes.title}>
-                        <img src="logo1.png" width="85px" height="50px" />
+                        <img src="logo1.png" onClick={() => handleButtonClick('/')} width="85px" height="50px" />
                     </Grid>
 
 
